@@ -7,9 +7,7 @@ function changeColor(color) {
   
   bgAnimate.style.background = color;
   curved.style.background = color;
-
   
-  document.body.style.backgroundColor = color;
 
   
   bgAnimate.classList.add('active');
@@ -24,6 +22,9 @@ const colors = document.querySelectorAll('.color');
 function activeLink() {
   colors.forEach((item) => item.classList.remove('active'));
   this.classList.add('active');
+  const selectedColor = this.getAttribute('data-color');
+  document.body.style.backgroundColor = selectedColor;
+  
 }
 
 colors.forEach((circle) => {
