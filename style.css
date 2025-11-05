@@ -12,7 +12,7 @@ body{
     min-height: 100vh;
     font-family: 'poppins';
     text-transform: capitalize;
-    transition: 1.2s ease-in-out;
+    transition: background-color 1.2s ease-in-out;
     background-color: #5c4680;
 }
 .wrapper {
