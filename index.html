@@ -1,49 +1,105 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/d043d4ce2e.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d043d4ce2e.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="colors">
-            <div onclick="changeColor('#d11b27')" style="--clr: #a30822;" data-color="#730f20" class="color" id="red"></div>
-            <div onclick="changeColor('#218db8')" style="--clr: #218db8;" data-color="#196482" class="color" id="yellow"></div>
-            <div onclick="changeColor('#f67599')" style="--clr: #f67599;" data-color="#b85387" class="color"  id="green"></div>
-            <div onclick="changeColor('#976ed7')" style="--clr: #976ed7;" data-color="#5c4680" class="color active"></div>
-        </div>
-    
-    <div class="wrapper">
-        <div class="bg-animate" id="bg-animate"></div>
-        <div class="curved" id="curved"></div>
-
-        <div class="container-login">
-            <h2>sign up</h2>
-            <div class="input-group">
-                <input type="text" required>
-                <label for="#">username</label>
-            </div>
-            <div class="input-group">
-                <input type="password" required>
-                <label for="#">password</label>
-            </div>
-            <div class="remember-forgot">
-                <a href="#">password forgot?</a>
-            </div>
-            <button type="submit">sign up</button>
-            <div class="sign-links">
-                <p>don't have an account<a href="#">sign up</a></p>
-            </div>
-            <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-google"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            </div>
-        </div>
+      <div
+        onclick="changeColor('#d11b27')"
+        style="--clr: #a30822"
+        data-color="#730f20"
+        class="color"
+        id="red"
+      ></div>
+      <div
+        onclick="changeColor('#218db8')"
+        style="--clr: #218db8"
+        data-color="#196482"
+        class="color"
+        id="yellow"
+      ></div>
+      <div
+        onclick="changeColor('#f67599')"
+        style="--clr: #f67599"
+        data-color="#b85387"
+        class="color"
+        id="green"
+      ></div>
+      <div
+        onclick="changeColor('#976ed7')"
+        style="--clr: #976ed7"
+        data-color="#5c4680"
+        class="color active"
+      ></div>
     </div>
 
+    <div class="wrapper" id="wrap">
+      <div class="bg-animate" id="bg-animate"></div>
+      <div class="curved" id="curved"></div>
+      <div class="container-login" id="login-containerr">
+        <h2>log in</h2>
+        <form id="login-form" action="#" method="post">
+          <div class="input-group">
+            <input id="usernameText1" type="text" required />
+            <label for="#">username</label>
+          </div>
+          <div class="input-group">
+            <input id="password" type="password" required />
+            <label for="#">password</label>
+          </div>
+          <div class="remember-forgot">
+            <a href="#">password forgot?</a>
+          </div>
+          <button onclick="login()" type="button">log in</button>
+          
+        </form>
+        <div class="sign-links">
+          <p>don't have an account<a class="sign-up" href="#">sign up</a></p>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-google"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="container-signUp">
+        <h2>sign up</h2>
+        <form id="signup-form" action="#" method="post">
+          <div class="input-group">
+            <input id="usernameText" type="text" required />
+            <label for="#">username</label>
+          </div>
+          <div class="input-group">
+            <input id="passwordText2" type="password" required />
+            <label for="#">password</label>
+          </div>
+          <div class="remember-forgot">
+            <a href="#">password forgot?</a>
+          </div>
+          <button onclick="register()" type="button">register
+            <div class="btn-wrapper" id="btn-wrapper"></div>
+          </button>
+        </form>
+        <div class="sign-links">
+          <p>you are registered?<a class="login-input" href="#">log in</a></p>
+        </div>
+      </div>
+    </div>
+     <div class="popup-wrapper" id="popupWrapp">
+          <div class="popup">
+            <h2 id="messaggio">Benvenuto</h2>
+                <button onclick="closePopup()" class="close-btn" id="closeBtn">Exit</button>
+          </div>
+        </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

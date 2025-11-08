@@ -27,21 +27,46 @@ body{
     border-radius: 20px;
     position: relative;
     z-index: 1;
-    transform: translateZ(0);
-    will-change: transform;
-    contain: point;
+    overflow: hidden;
+}
+.container-login, .container-signUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    color: white;
+    left: 0;
+    right: 0;
+    transition: transform 0.4s ease-in-out;
 }
 .container-login {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    left: 0;
+    transform: translateX(0);
 }
+.container-signUp {
+    left: 0;
+    transform: translateX(100%);
+}
+.container-signUp h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.wrapper.active .container-login {
+    transform: translateX(-100%);
+}
+.wrapper.active .container-signUp {
+    transform: translateX(0);
+}
+
+
 .container-login h2 {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    font-family: 'poppins';
 }
 .input-group {
     display: flex;
@@ -93,7 +118,7 @@ body{
     text-decoration: underline;
 }
 button {
-    width: 80%;
+    width: 100%;
     height: 100%;
     border: none;
     background-color: white;
@@ -107,9 +132,25 @@ button {
     padding: 10px;
     cursor: pointer;
     transition: .4s;
+    position: relative;
+    overflow: hidden;
+}
+.btn-wrapper {
+    position: absolute;
+    background-color: #8467b2;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    width: 0%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 button:hover {
-    background-color: #493568;
+    background-color: #525252;
     color: white;
 }
 .sign-links {
@@ -125,7 +166,7 @@ button:hover {
     transition: .4s;
 }
 .sign-links a:hover {
-    color: #976ed7;
+    color: #5290b7;
 }
 .social-icons {
     display: flex;
@@ -252,4 +293,34 @@ button:hover {
         height: 45px;
         margin: 0 10px 0;
     }
+    
 }
+
+.popup-wrapper {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    transition: transform 0.4s ease;
+    transform: scale(0);
+}
+.popup {
+    width: 400px;
+    background-color: #e0e0e0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+.popup h2 {
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+
+
