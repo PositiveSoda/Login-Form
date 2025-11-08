@@ -133,7 +133,6 @@ function showPopup(){
   popup.style.opacity = '1';
   popup.style.display = 'flex';
   popup.style.pointerEvents = 'auto';
-  
 }
 
 

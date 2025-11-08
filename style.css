@@ -188,7 +188,6 @@ button:hover {
     text-decoration: none;
     transition: .4s;
 }
-
 .social-icons a:hover {
     background-color: white;
     color: black;
@@ -217,7 +216,6 @@ button:hover {
     border-radius: 20px;
     clip-path: circle(0% at 0 0);
 }
-
 .bg-animate.active {
     transition: clip-path 1.2s ease-in-out;
     clip-path: circle(98% at 0 0);
@@ -273,12 +271,10 @@ button:hover {
     .colors {
         display: flex;
         flex-direction: row;
-        bottom: 0px;
-        width: 350px;
+        bottom: 5px;
+        width: 320px;
         height: 60px;
-        border-top-right-radius: 30px;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 0;
+        border-radius: 50px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -292,8 +288,7 @@ button:hover {
         width: 45px;
         height: 45px;
         margin: 0 10px 0;
-    }
-    
+    } 
 }
 
 .popup-wrapper {
